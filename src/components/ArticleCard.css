@@ -1,0 +1,14 @@
+.article-card {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.article-card-img {
+  width: 20rem;
+  height: 15rem;
+  margin-left: 3rem;
+}
+
+.article-card-title {
+  text-align: center;
+}
