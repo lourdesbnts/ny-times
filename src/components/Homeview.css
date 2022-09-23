@@ -1,11 +1,29 @@
 .homeview {
-  padding: 20px;
+  padding: 0rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 0rem;
 }
 
 .ny-times-header {
   text-align: center;
   font-size: 5rem;
+}
+
+@media only screen and (min-width: 100px) {
+    .homeview-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .homeview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .homeview {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

@@ -1,6 +1,6 @@
 .article-card {
     box-sizing: border-box;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .article-card-img {
@@ -9,6 +9,7 @@
   margin-left: 3rem;
 }
 
-.article-card-title {
+.article-card-title,
+.article-card-date {
   text-align: center;
 }

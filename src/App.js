@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import getArticles from './apiCall';
+import ArticleDetails from './components/ArticleDetails';
 import Homeview from './components/Homeview';
-// import Home from './components/Home'
 
 const App = () => {
   const [articles, setArticles] = useState([]);
@@ -9,15 +10,23 @@ const App = () => {
   useEffect(() => {
     getArticles()
     .then(data => {
-      console.log(data.results)
       setArticles(data.results)
     })
   }, [])
 
+
   return (
-    <>
-      <Homeview articles={articles}/>
-    </>
+    <main>
+    <Homeview articles={articles}/>
+    <Route exact path="/:title" render={({match}) => {
+    return (
+      <>
+      {console.log(match.params.title)}
+      <ArticleDetails title={match.params.title} articles={articles} />
+
+      </>
+    )}}/>
+    </main>
   )
 }
 
