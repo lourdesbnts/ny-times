@@ -1,3 +1,18 @@
-.article-details {
- align-items: center;
+.article-details-title,
+.article-details-abstract {
+ text-align: center;
 }
+
+.article-details-image {
+  padding-left: 25rem;
+}
+
+.article-details-link {
+  padding-left: 40rem;
+}
+
+.article-details-abstract {
+  font-weight: bold;
+}
+
+
